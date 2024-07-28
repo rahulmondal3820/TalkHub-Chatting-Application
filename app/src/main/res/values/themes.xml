@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TalkHub" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+     <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorPrimaryDark">@color/statusBar</item>
+        <item name="colorAccent">@color/statusBar</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/my_light_primary</item>
+<item name="android:windowFullscreen">false</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Make sure nothing here forces full screen -->
+
+
+
+    </style>
+
+    <style name="Theme.TalkHub" parent="Base.Theme.TalkHub" />
+
+
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:id="@+id/ll"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leftCardView"
+        android:gravity="end"
+
+
+        android:background="@drawable/chat_text_left_side"
+        android:orientation="horizontal">
+
+
+    <TextView
+         android:id="@+id/leftMessageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:paddingEnd="5dp"
+        android:paddingVertical="5dp"
+        android:paddingStart="10dp"
+        android:textStyle="bold"
+        android:text="@string/hello_rahul"
+        android:textSize="20sp"
+
+       />
+        <TextView
+            android:id="@+id/LeftmessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="10sp"
+            android:text="02:12"/>
+    </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/rightCardView"
+    android:layout_alignParentEnd="true">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="end"
+
+
+            android:background="@drawable/chat_text_right_side"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/rightMessageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="50dp"
+                android:paddingEnd="5dp"
+                android:paddingVertical="5dp"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:text="@string/hello_rahul"
+                android:textSize="20sp"
+
+                />
+            <TextView
+                android:id="@+id/rightMessageTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:textSize="10sp"
+                android:text="02:12"/>
+        </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

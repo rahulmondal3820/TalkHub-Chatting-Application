@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatList_activity"
+    android:orientation="vertical">
+
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:id="@+id/chatAppbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="#CC42EC">
+
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/chatListToolBar"
+          android:layout_width="match_parent"
+          android:layout_height="?android:attr/actionBarSize">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+
+             android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:weightSum="10">
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:layout_marginEnd="10dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:src="@drawable/my_image"
+
+                   />
+
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                 android:layout_weight="1"
+                 android:src="@drawable/baseline_chat_24"
+                 app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end|center_vertical"
+                android:weightSum="20">
+
+
+            </LinearLayout>
+
+
+         </LinearLayout>
+
+      </androidx.appcompat.widget.Toolbar>
+
+   </com.google.android.material.appbar.AppBarLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+
+    android:layout_below="@id/chatAppbar"
+
+    android:layout_height="match_parent">
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_gravity=""
+       />
+
+   <ImageView
+       android:id="@+id/addContact"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="16dp"
+       android:layout_marginEnd="16dp"
+       android:layout_gravity="bottom|end"
+       android:backgroundTint="@color/yellow"
+       android:src="@drawable/baseline_add_24" />
+</FrameLayout>
+</RelativeLayout>

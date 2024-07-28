@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/perent"
+    android:background="#E6E4E4"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".chatFregment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/chatAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CC42EC">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/my_image"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nameMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/rahul"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/online" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end|center_vertical"
+                    android:weightSum="20">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/video_call" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+
+                        android:src="@drawable/phone" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_below="@id/chatAppbar"
+        android:layout_above="@id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginBottom="3dp"-->
+<!--        android:layout_below="@+id/ToolBarChat"-->
+<!--        android:id="@+id/chatRecyclerView"-->
+<!--        android:layout_above="@+id/linear"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/enterMessage"
+            android:layout_marginStart="4dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_weight="1"
+            android:hint="@string/message"
+            android:background="@drawable/bg_et_message"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:ems="10"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/send"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="0"
+
+            android:src="@drawable/send_message"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
